@@ -1,0 +1,41 @@
+Tizen  provides an application framework based on JavaScript. JavaScript is strong especially in IoT devices, since it has enormous developer community support and a fast development cycle.
+
+1. Cross-Device Compatibility: To enable a seamless user experience across various device categories by providing a unified platform that allows applications to run on multiple devices without extensive modification.
+
+2. Developer Empowerment: To facilitate application development through support for multiple programming languages and frameworks, particularly emphasizing web technologies like HTML5, thereby encouraging innovation and creativity in app design.
+
+3. Modularity and Flexibility: To offer a modular architecture that allows manufacturers to customize the operating system according to their specific requirements and use cases, enhancing adaptability in different markets.
+
+4. Enhanced User Experience: To deliver an intuitive and responsive user interface that meets the needs of diverse users while ensuring accessibility and ease of use.
+
+5. Robust Security: To prioritize security through features such as sandboxing, secure boot, and regular updates, ensuring the protection of user data and maintaining trust in the platform.
+
+6. Ecosystem Growth: To foster a vibrant ecosystem of applications and services that enrich the user experience, encouraging developers to create and distribute innovative solutions through the Tizen Store.
+
+7. Support for Emerging Technologies: To adapt to the evolving landscape of technology by integrating support for new standards and innovations in areas such as IoT, artificial intelligence, and connectivity.
+
+8. Software Updates
+
+For home appliance products, Tizen RT supports the proprietary software update mechanism developed by Samsung. As Tizen RT becomes an open source project, non-Samsung devices running Tizen RT require the software update service as well. To support non-Samsung devices, Tizen RT plans to support OMA lightweight M2M (LWM2M)-based FOTA in 2017. ARTIK Cloud already supports LWM2M.
+
+9. Fault Tolerance
+
+IoT platforms face a challenge in the large-scale device management of deployed IoT devices. System reliability has become a key success factor for IoT platforms. If a critical bug in device drivers or other system components occurs, the whole system inevitably crashes in the case of a traditional monolithic kernel. A clear solution is needed to overcome this challenge; however, typical Tizen RT target devices have only an MPU (memory protection unit). Without an MMU (memory management unit), protecting the system from faults is much more difficult. To provide MPU-based fault isolation, Tizen RT pursues 4 approaches:
+
+• Per-thread memory protection
+
+• Microkernel architecture
+
+• Self-healing
+
+• Live update
+
+Assuming the completion of all these features, Tizen RT can be safely protected from any kind of faults. For example, even though a network component encounters a critical error, this fault can be identified by memory protection and isolated by the microkernel architecture. The network component can be restarted by self-healing without any effect on the entire system. If that component is not self-healed eventually, it can be updated by live update through software updating.
+
+10. Memory Protection
+
+Tizen RT supports not only flat build, but also memory-protected build. The former can help to reduce the memory usage at the expense of memory vulnerability. The latter can be achieved at the cost of about 20~30% increase of memory usage. Which mode is more suitable for low-end IoT devices depends on the trade-off analysis, considering software requirements and hardware limitations.
+
+User/kernel space separation has already been achieved. The entire memory map is divided into user and kernel spaces. The kernel space is exclusively accessed by the kernel only. Any user tasks which illegally attempt to access this memory region raise an exception. In this mode, the kernel executes with privileged permissions while user threads execute with unprivileged, restricted permissions, as shown in the following figure. Per-thread memory protection is expected to be implemented in the first half of 2017.
+
+The user thread is executed in the unprivileged mode with restricted permissions. When multiple threads are running, the scheduler preempts the currently-running task and brings the new ready-to-run thread for execution. The stack/data region of thread A is protected from being written by thread B even after thread A is preempted by thread B. This per-thread protection can be realized by the MPU which stores and restores the MPU context of every thread at every context switch.
