@@ -1,0 +1,63 @@
+Software and hardware requirements of Tizen OS 
+
+The software and hardware requirements for Tizen OS can vary based on the specific version of Tizen and the type of device it is intended for (e.g., smartphones, smart TVs, wearables, IoT devices). Below are general guidelines for both software and hardware requirements:
+
+Software Requirements
+
+1. Development Environment:
+
+   • Tizen Studio: The official IDE for Tizen application development, which includes tools for building, debugging, and testing applications.
+
+   • Web Development Tools: Support for web technologies like HTML5, CSS, and JavaScript.
+
+   • Native Development Tools: C/C++ development tools for native applications.
+
+2. Supported APIs:
+
+   • Tizen provides various APIs for accessing device features, including multimedia, sensors, networking, and more. Developers need to be familiar with these APIs based on the type of application they are building.
+
+3. Frameworks:
+
+   • Support for various frameworks such as .NET, W3C APIs, and others depending on the target application type.
+
+Hardware Requirements
+
+1. Processor:
+
+   • ARM-based processors (e.g., Cortex-A series) are commonly used in Tizen devices.
+
+   • x86 architecture is also supported in some cases, particularly for smart TVs and other devices.
+
+2. Memory:
+
+   • Minimum RAM: Typically 512 MB or higher, depending on the device type.
+
+   • Recommended RAM: 1 GB or more for better performance, especially for smartphones and complex applications.
+
+3. Storage:
+
+   • Minimum storage: At least 1 GB of internal storage is recommended for basic functionality.
+
+   • Additional storage may be required for applications, media files, and system updates.
+
+4. Display:
+
+   • Support for various display resolutions depending on the device category (e.g., HD for TVs, standard resolutions for wearables).
+
+5. Connectivity:
+
+   • Support for Wi-Fi, Bluetooth, and possibly cellular connectivity (for smartphones).
+
+   • Ethernet support may be required for certain devices.
+
+6. Sensors and Interfaces (depending on the device):
+
+   • Touchscreen capabilities for smartphones and wearables.
+
+   • Various sensors such as accelerometers, gyroscopes, heart rate monitors (for wearables), etc.
+
+7. Graphics:
+
+   • GPU support may be required for rendering graphics-intensive applications, especially in smart TVs and gaming devices.
+Note
+The specific requirements can vary significantly based on the intended use case of the Tizen OS device. Therefore, it's essential to refer to the official Tizen documentation for the particular version and device category you are interested in to obtain precise specifications.
