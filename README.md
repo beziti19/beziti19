@@ -12,18 +12,6 @@
 </head>
 <body>
 
-  <!-- Table of Contents -->
-  <nav class="toc" aria-label="tizen operating system">
-    <h2>tizen operating system</h2>
-    <ul>
-      <li><a href="#installation">1. Installation</a></li>
-      <li><a href="#tizen">2. Tizen OS</a></li>
-      <li><a href="#systemcall">3. System Call</a></li>
-    </ul>
-  </nav>
-
-  <!-- Sections -->
-
   <section id="installation">
     <h2>1. Installation</h2>
     <p><details><pre>installation 
