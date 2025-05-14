@@ -1,4 +1,9 @@
-## Hi there
+## tizen os
+##
+##
+## bezawit ayal
+## bdu1601082
+
 
 <!--
 **beziti19/beziti19** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
