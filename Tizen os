@@ -133,37 +133,7 @@ Note
 
 The specific requirements can vary significantly based on the intended use case of the Tizen OS device. Therefore, it's essential to refer to the official Tizen documentation for the particular version and device category you are interested in to obtain precise specifications.
 
-                        Installation process of Tizen OS 
-
- Installation process 
-
-The installation process for Tizen OS primarily involves installing Tizen Studio, the dedicated development environment, and then installing the necessary tools and SDKs within it. You can also install Tizen SDK through Visual Studio. For Samsung TVs, you may need to install third-party apps using USB or by enabling developer mode and allowing installation from unknown sources. 
-The installer has been renewed to provide a better user experience and show the unique Tizen philosophy. Using the new installer, you can now install the basic platform and the useful tools with a few clicks.
-
-You can use either the GUI or the CLI version of the installer.
-
-Using the GUI Installer
-To install Tizen Studio:
-• Search Tizen Studio installer 
-• Down load 64 bit
-• Wait for fiile downloading  ends 
-• Open the file 
-• Accept the software license.
-• The license contains important legal notices for using Tizen Studio. Read it fully, and click Accept only if you agree with the license statement
-• And then click Install 
-• Wait  until installation is done 
-• Click Finish and close the installer:
-• Package Manager is  launched  automatically 
-• Click  Install on latest version (9.0) and accept  the Package Manager license agreement 
-• Wait for your installation is finished 
-
-The problem  
-
- Internet connection limitation  
-
- waiting until installation process ends
-
-It takes more time
+                        
 
 Supported file system 
 
