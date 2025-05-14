@@ -1,6 +1,4 @@
-## tizen os
-##
-##
+## tizen os 
 ## bezawit ayal
 ## bdu1601082
 
