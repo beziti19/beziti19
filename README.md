@@ -9,66 +9,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tizen OS Documentation</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #fefefe;
-      line-height: 1.6;
-    }
-
-    .toc {
-      background: #e6f0ff;
-      border-left: 4px solid #007acc;
-      padding: 20px;
-      margin-bottom: 30px;
-      max-width: 500px;
-    }
-
-    .toc h2 {
-      margin-top: 0;
-    }
-
-    .toc ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .toc li {
-      margin: 10px 0;
-    }
-
-    .toc a {
-      text-decoration: none;
-      color: #005fa3;
-    }
-
-    .toc a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      margin-bottom: 50px;
-    }
-
-    section h2 {
-      color: #007acc;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      margin-top: 10px;
-    }
-
-    code {
-      background: #f4f4f4;
-      padding: 2px 5px;
-      border-radius: 3px;
-      font-family: monospace;
-    }
-  </style>
+ 
 </head>
 <body>
 
