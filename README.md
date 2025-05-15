@@ -497,8 +497,7 @@ The first parameter of the function is a path that gives information about its i
 Another parameter is buff which gives information about the address to the stat structure. This stat structure holds all the updated information about the particular file, which is pointed by the *buf pointer.
 
 The Structure of lstat() Function</p>
-
-        <p>The system called lstat() function returns a structure called stat structure. The data members of that stat structure are:</p>
+The system called lstat() function returns a structure called stat structure. The data members of that stat structure are:
 
 <li> st_mode: the file permissions and file type information.
 </li>
@@ -522,8 +521,8 @@ The Structure of lstat() Function</p>
 
 <li>st_blocks: counting the number of used blocks (512 bytes).</li></p>
   
-      <p>Macros
-        The lstat() function has stast struction, which contains several types of macros. These macros help the lstat() function to recognize the type of files. The name of these macros is:</p>
+      Macros
+        The lstat() function has stast struction, which contains several types of macros. These macros help the lstat() function to recognize the type of files. The name of these macros is:
  <p>• S_ISBLK(): test for a block special file.
 
 • S_ISCHR(): examine if the file is a character device file.
@@ -538,7 +537,7 @@ The Structure of lstat() Function</p>
 
 • S_ISSOCK(): examine if the file is a socket.</p>
 
-        <p>The lstat() function in Unix-like operating systems is used to retrieve information about a file or a symbolic link. Unlike stat(), which follows symbolic links, lstat() returns information about the link itself.</p>
+   The lstat() function in Unix-like operating systems is used to retrieve information about a file or a symbolic link. Unlike stat(), which follows symbolic links, lstat() returns information about the link itself.
 
  <p>1. Include Headers: We include <stdio.h> for input/output functions, <stdlib.h> for general utilities, <sys/stat.h> for the stat structure and lstat() function, and <unistd.h> for POSIX operating system API.
 
