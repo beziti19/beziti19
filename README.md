@@ -12,35 +12,9 @@
 </head>
 <body>
 
-  <section id="installation">
-    <h2>1. Installation</h2>
-    <details><p><h2>installation </h2>
-The installation process for Tizen OS primarily involves installing Tizen Studio, the dedicated development environment, and then installing the necessary tools and SDKs within it. You can also install Tizen SDK through Visual Studio. For Samsung TVs, you may need to install third-party apps using USB or by enabling developer mode and allowing installation from unknown sources. </p>
-<p>The installer has been renewed to provide a better user experience and show the unique Tizen philosophy. Using the new installer, you can now install the basic platform and the useful tools with a few clicks.</p>
- You can use either the GUI or the CLI version of the installer.
-
- <p>Using the GUI Installer</p>
-
-To install Tizen Studio:
-<li> Search Tizen Studio installer </li>
-<li>Down load 64 bit</li>
-<li> Wait for fiile downloading  ends </li>
-<li> Open the file </li>
-<li>Accept the software license.</li>
-<li>The license contains important legal notices for using Tizen Studio. Read it fully, and click Accept only if you agree with the license statement</li>
-<li> And then click Install </li>
-<li>Wait  until installation is done </li>
-<li> Click Finish and close the installer:</li>
- <li>Package Manager is  launched  automatically </li>
-      <li>Click  Install on latest version (9.0) and accept  the Package Manager license agreement </li>
-      <li>Wait for your installation is finished :
-      </li>
-     </details></p>
-   
-  </section>
-
+  
   <section id="tizen">
-    <h2>2. Tizen OS</h2>
+    <h2>1. Tizen OS</h2>
     <p><details>
      <h2> Introduction </h2>
 Tizen is an open source Linux based operating system.It is primarily developed by Samsung electronics and supported by Linux Foundation.</p>
@@ -112,7 +86,28 @@ Tizen RT supports not only flat build, but also memory-protected build. The form
  <p>User/kernel space separation has already been achieved. The entire memory map is divided into user and kernel spaces. The kernel space is exclusively accessed by the kernel only. Any user tasks which illegally attempt to access this memory region raise an exception. In this mode, the kernel executes with privileged permissions while user threads execute with unprivileged, restricted permissions, as shown in the following figure. Per-thread memory protection is expected to be implemented in the first half of 2017.</p>
 
  <p>The user thread is executed in the unprivileged mode with restricted permissions. When multiple threads are running, the scheduler preempts the currently-running task and brings the new ready-to-run thread for execution. The stack/data region of thread A is protected from being written by thread B even after thread A is preempted by thread B. This per-thread protection can be realized by the MPU which stores and restores the MPU context of every thread at every context switch.</p>
+installation process for Tizen OS primarily involves installing Tizen Studio, the dedicated development environment, and then installing the necessary tools and SDKs within it. You can also install Tizen SDK through Visual Studio. For Samsung TVs, you may need to install third-party apps using USB or by enabling developer mode and allowing installation from unknown sources. </p>
+<p>The installer has been renewed to provide a better user experience and show the unique Tizen philosophy. Using the new installer, you can now install the basic platform and the useful tools with a few clicks.</p>
+ You can use either the GUI or the CLI version of the installer.
 
+ <p>Using the GUI Installer</p>
+
+To install Tizen Studio:
+<li> Search Tizen Studio installer </li>
+<li>Down load 64 bit</li>
+<li> Wait for fiile downloading  ends </li>
+<li> Open the file </li>
+<li>Accept the software license.</li>
+<li>The license contains important legal notices for using Tizen Studio. Read it fully, and click Accept only if you agree with the license statement</li>
+<li> And then click Install </li>
+<li>Wait  until installation is done </li>
+<li> Click Finish and close the installer:</li>
+ <li>Package Manager is  launched  automatically </li>
+      <li>Click  Install on latest version (9.0) and accept  the Package Manager license agreement </li>
+      <li>Wait for your installation is finished :
+      </li>
+     </p>
+   
  <h2> Software and hardware requirements of Tizen OS </h2>
 
  <p>The software and hardware requirements for Tizen OS can vary based on the specific version of Tizen and the type of device it is intended for (e.g., smartphones, smart TVs, wearables, IoT devices). Below are general guidelines for both software and hardware requirements:</p>
@@ -479,7 +474,7 @@ How Does It Work?
   </section>
 
   <section id="systemcall">
-    <h2>3. System Call</h2>
+    <h2>2. System Call</h2>
     <p>
       <details><h3>lstat() system call</h3>
 
