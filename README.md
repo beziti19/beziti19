@@ -498,7 +498,7 @@ Another parameter is buff which gives information about the address to the stat 
 
 The Structure of lstat() Function</p>
 
-        <p>The system called lstat() function returns a structure called stat structure. The data members of that stat structure are:
+        <p>The system called lstat() function returns a structure called stat structure. The data members of that stat structure are:</p>
 
 <li> st_mode: the file permissions and file type information.
 </li>
@@ -523,8 +523,8 @@ The Structure of lstat() Function</p>
 <li>st_blocks: counting the number of used blocks (512 bytes).</li></p>
   
       <p>Macros
-        The lstat() function has stast struction, which contains several types of macros. These macros help the lstat() function to recognize the type of files. The name of these macros is:
-• S_ISBLK(): test for a block special file.
+        The lstat() function has stast struction, which contains several types of macros. These macros help the lstat() function to recognize the type of files. The name of these macros is:</p>
+ <p>• S_ISBLK(): test for a block special file.
 
 • S_ISCHR(): examine if the file is a character device file.
 
