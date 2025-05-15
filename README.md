@@ -2,6 +2,12 @@
 ## tizen os
  <img src="https://images.openai.com/thumbnails/740d12d198af435804083a6cbf5cd482.jpeg" alt="Tizen OS Logo" width="130"> 
  <!DOCTYPE html>
+
+
+
+
+
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
