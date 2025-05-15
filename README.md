@@ -482,7 +482,7 @@ How Does It Work?
   <section id="systemcall">
     <h2>3. System Call</h2>
     <p>
-      <details><pre> lstat() system call
+      <details><h3>lstat() system call</h3>
 
 lstat() function will control all the system status and returns the information about a special link called a symbolic link. stat() & fstat() function gives the information about the particular file, but the lstat() function refers to a link which points the particular file.
 
@@ -559,7 +559,7 @@ gcc -o lstat_example lstat_example.c
 Replace <filename> with the path to a file or symbolic link you want to examine.
 
 Make sure you have the appropriate permissions to access the file or symbolic link you're querying with lstat().
-lstat() system call</pre>
+lstat() system call
 
     </p>
     </ul>
