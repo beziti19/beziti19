@@ -1,14 +1,11 @@
-
-Simple lstat() in C++
-
-#include <iostream>      
-#include <sys/stat.h>  // For lstat() and struct stat
-#include <unistd.h> // For POSIX functions
-#include <cstring>  // For strerror()
-#include <errno.h>  // For errno
+#include <iostream>      // For std::cout and std::cerr
+#include <sys/stat.h>    // For lstat() and struct stat
+#include <unistd.h>      // For POSIX functions
+#include <cstring>       // For strerror()
+#include <errno.h>       // For errno
 
 int main() {
-    const char* path = "sample:text";  // Path to the file or symbolic link
+    const char* path = "sample.txt";  // Path to the file or symbolic link
 
     struct stat fileStat;
 
@@ -17,7 +14,6 @@ int main() {
         std::cerr << "Error using lstat on '" << path << "': " << strerror(errno) << std::endl;
         return 1;
     }
-
     std::cout << "File information for: " << path << std::endl;
     std::cout << "-------------------------------" << std::endl;
     std::cout << "Size: " << fileStat.st_size << " bytes" << std::endl;
@@ -36,35 +32,19 @@ int main() {
     }
 
     return 0;
-}
-
-
----
 
 How to Run This:
 
 1. Create a sample file:
-
-
-
 echo "Hello" > sample.txt
 
 2. (Optional) Create a symbolic link:
-
-
-
 ln -s sample.txt symlink.txt
 
 3. Compile the C++ code:
-
-
-
 g++ lstat_simple.cpp -o lstat_simple
 
 4. Run the program:
-
-
-
 ./lstat_simple
 
 
