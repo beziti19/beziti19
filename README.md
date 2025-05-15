@@ -2,8 +2,6 @@
 -  bdu1601082
 ## tizen os
 ## <img src="https://images.openai.com/thumbnails/740d12d198af435804083a6cbf5cd482.jpeg" alt="Tizen OS Logo" width="130"> 
-
-
 ## <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +10,6 @@
  
 </head>
 <body>
-
   
   <section id="tizen">
     <h2>1. Tizen OS</h2>
