@@ -501,8 +501,8 @@ The Structure of lstat() Function</p>
         <p>The system called lstat() function returns a structure called stat structure. The data members of that stat structure are:
 
 <li> st_mode: the file permissions and file type information.
-
-<li>st_ino: Information about the inode.
+</li>
+<li>st_ino: Information about the inode.</li>
 
 <li>st_dev: the device name.</li>
 
@@ -538,9 +538,9 @@ The Structure of lstat() Function</p>
 
 • S_ISSOCK(): examine if the file is a socket.</p>
 
-        <p>The lstat() function in Unix-like operating systems is used to retrieve information about a file or a symbolic link. Unlike stat(), which follows symbolic links, lstat() returns information about the link itself.
+        <p>The lstat() function in Unix-like operating systems is used to retrieve information about a file or a symbolic link. Unlike stat(), which follows symbolic links, lstat() returns information about the link itself.</p>
 
-1. Include Headers: We include <stdio.h> for input/output functions, <stdlib.h> for general utilities, <sys/stat.h> for the stat structure and lstat() function, and <unistd.h> for POSIX operating system API.
+ <p>1. Include Headers: We include <stdio.h> for input/output functions, <stdlib.h> for general utilities, <sys/stat.h> for the stat structure and lstat() function, and <unistd.h> for POSIX operating system API.
 
 2. Check Arguments: The program expects one argument (the filename). If not provided, it prints usage instructions and exits.
 
