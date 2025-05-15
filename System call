@@ -1,103 +1,76 @@
-lstat() system call
 
-lstat() function will control all the system status and returns the information about a special link called a symbolic link. stat() & fstat() function gives the information about the particular file, but the lstat() function refers to a link which points the particular file.
+Simple lstat() in C++
 
-Syntax
+#include <iostream>      
+#include <sys/stat.h>  // For lstat() and struct stat
+#include <unistd.h> // For POSIX functions
+#include <cstring>  // For strerror()
+#include <errno.h>  // For errno
 
-The syntax of lstat() function is –
-int lstat(const char *path, struct stat *buf);
-Here inside the lstat() function, we will pass two parameters as an argument.
+int main() {
+    const char* path = "sample:text";  // Path to the file or symbolic link
 
-The first parameter of the function is a path that gives information about its identification and the probable or actual source of the file.
-
-Another parameter is buff which gives information about the address to the stat structure. This stat structure holds all the updated information about the particular file, which is pointed by the *buf pointer.
-
-The Structure of lstat() Function
-
-The system called lstat() function returns a structure called stat structure. The data members of that stat structure are:
-
-• st_mode: the file permissions and file type information.
-
-• st_ino: Information about the inode.
-
-• st_dev: the device name.
-
-• st_uid: getting the identification of the source file.
-
-• st_gid: getting the group of identification of the source file
-
-• st_size: the size of the file.
-
-• st_atime: mentioning the last time of the used file.
-
-• st_ctime: mentioning the time of changing the metadata of the file. Example: file name change.
-
-• st_mtime: mentioning the time to change the content of the file.
-
-• st_nlink: mentioning the number of the directory entry.
-
-• st_blocks: counting the number of used blocks (512 bytes).
-
-Macros
-
-The lstat() function has stast struction, which contains several types of macros. These macros help the lstat() function to recognize the type of files. The name of these macros is:
-• S_ISBLK(): test for a block special file.
-
-• S_ISCHR(): examine if the file is a character device file.
-
-• S_ISDIR(): file type is a directory.
-
-• S_ISFIFO(): inspection related to pipe in the system.
-
-• S_ISREG(): examine the commonly used file.
-
-• S_ISLINK(): examine the soft link.
-
-• S_ISSOCK(): examine if the file is a socket.
-
-The lstat() function in Unix-like operating systems is used to retrieve information about a file or a symbolic link. Unlike stat(), which follows symbolic links, lstat() returns information about the link itself.
-
-Here’s a basic implementation of how you might use lstat() in C. This function is part of the POSIX standard and is typically declared in <sys/stat.h>.
-
-#include <iostream>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
-
-int main(int argc, char* argv[]) {
     struct stat fileStat;
 
-    if (argc != 2) {
-        std::cerr << "Usage: " << argv[0] << " <file_path>" << std::endl;
+    // lstat gets file status without following symbolic links
+    if (lstat(path, &fileStat) == -1) {
+        std::cerr << "Error using lstat on '" << path << "': " << strerror(errno) << std::endl;
         return 1;
     }
 
-    if (lstat(argv[1], &fileStat) < 0) {
-        perror("lstat");
-        return 1;
-    }
+    std::cout << "File information for: " << path << std::endl;
+    std::cout << "-------------------------------" << std::endl;
+    std::cout << "Size: " << fileStat.st_size << " bytes" << std::endl;
+    std::cout << "Inode: " << fileStat.st_ino << std::endl;
+    std::cout << "Hard Links: " << fileStat.st_nlink << std::endl;
 
-    std::cout << "File size: " << fileStat.st_size << " bytes" << std::endl;
-    std::cout << "Number of links: " << fileStat.st_nlink << std::endl;
-    std::cout << "File inode: " << fileStat.st_ino << std::endl;
-
-    if (S_ISLNK(fileStat.st_mode)) {
-        std::cout << "This is a symbolic link." << std::endl;
+    // Check file type
+    if (S_ISREG(fileStat.st_mode)) {
+        std::cout << "Type: Regular file" << std::endl;
     } else if (S_ISDIR(fileStat.st_mode)) {
-        std::cout << "This is a directory." << std::endl;
+        std::cout << "Type: Directory" << std::endl;
+    } else if (S_ISLNK(fileStat.st_mode)) {
+        std::cout << "Type: Symbolic link" << std::endl;
     } else {
-        std::cout << "This is a regular file." << std::endl;
+        std::cout << "Type: Other" << std::endl;
     }
 
     return 0;
 }
 
-Them the output is:
 
-g++ -o lstat_cpp lstat_cpp.cpp
-./lstat_cpp <file_or_symlink>
+---
+
+How to Run This:
+
+1. Create a sample file:
 
 
+
+echo "Hello" > sample.txt
+
+2. (Optional) Create a symbolic link:
+
+
+
+ln -s sample.txt symlink.txt
+
+3. Compile the C++ code:
+
+
+
+g++ lstat_simple.cpp -o lstat_simple
+
+4. Run the program:
+
+
+
+./lstat_simple
+
+
+---
+
+This will output file details, and if you run it on a symlink, lstat() will report info about the link itself, not the target.
 
 Example Usage of lstat()
 
@@ -150,197 +123,6 @@ int main(int argc, char *argv[]) {
     return EXIT_SUCCESS;
 }
 
-Output : data/user/0/ru.iiec.cxxdroid/files/iiec_tmp_binary <filenname>
 
-1. Include Headers: We include <stdio.h> for input/output functions, <stdlib.h> for general utilities, <sys/stat.h> for the stat structure and lstat() function, and <unistd.h> for POSIX operating system API.
 
-2. Check Arguments: The program expects one argument (the filename). If not provided, it prints usage instructions and exits.
 
-3. Call lstat(): The lstat() function is called with the filename and a pointer to a struct stat. If it fails, it prints an error message using perror().
-
-4. Print Information: If successful, it prints various attributes of the file, including size, number of links, inode number, and file type.
-
-5. File Type Determination: The program uses macros like S_ISREG, S_ISDIR, etc., to determine the type of file.
-
-Compilation and Execution
-To compile and run this program, save it as lstat_example.c and use the following commands in your terminal:
-
-gcc -o lstat_example lstat_example.c
-./lstat_example <filename>
-
-Replace <filename> with the path to a file or symbolic link you want to examine.
-
-Make sure you have the appropriate permissions to access the file or symbolic link you're querying with lstat().
-lstat() system call
-
-lstat() function will control all the system status and returns the information about a special link called a symbolic link. stat() & fstat() function gives the information about the particular file, but the lstat() function refers to a link which points the particular file.
-
-Syntax
-
-The syntax of lstat() function is –
-int lstat(const char *path, struct stat *buf);
-Here inside the lstat() function, we will pass two parameters as an argument.
-
-The first parameter of the function is a path that gives information about its identification and the probable or actual source of the file.
-
-Another parameter is buff which gives information about the address to the stat structure. This stat structure holds all the updated information about the particular file, which is pointed by the *buf pointer.
-
-The Structure of lstat() Function
-
-The system called lstat() function returns a structure called stat structure. The data members of that stat structure are:
-
-• st_mode: the file permissions and file type information.
-
-• st_ino: Information about the inode.
-
-• st_dev: the device name.
-
-• st_uid: getting the identification of the source file.
-
-• st_gid: getting the group of identification of the source file
-
-• st_size: the size of the file.
-
-• st_atime: mentioning the last time of the used file.
-
-• st_ctime: mentioning the time of changing the metadata of the file. Example: file name change.
-
-• st_mtime: mentioning the time to change the content of the file.
-
-• st_nlink: mentioning the number of the directory entry.
-
-• st_blocks: counting the number of used blocks (512 bytes).
-
-Macros
-
-The lstat() function has stast struction, which contains several types of macros. These macros help the lstat() function to recognize the type of files. The name of these macros is:
-• S_ISBLK(): test for a block special file.
-
-• S_ISCHR(): examine if the file is a character device file.
-
-• S_ISDIR(): file type is a directory.
-
-• S_ISFIFO(): inspection related to pipe in the system.
-
-• S_ISREG(): examine the commonly used file.
-
-• S_ISLINK(): examine the soft link.
-
-• S_ISSOCK(): examine if the file is a socket.
-
-The lstat() function in Unix-like operating systems is used to retrieve information about a file or a symbolic link. Unlike stat(), which follows symbolic links, lstat() returns information about the link itself.
-
-Here’s a basic implementation of how you might use lstat() in C. This function is part of the POSIX standard and is typically declared in <sys/stat.h>.
-
-#include <iostream>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
-
-int main(int argc, char* argv[]) {
-    struct stat fileStat;
-
-    if (argc != 2) {
-        std::cerr << "Usage: " << argv[0] << " <file_path>" << std::endl;
-        return 1;
-    }
-
-    if (lstat(argv[1], &fileStat) < 0) {
-        perror("lstat");
-        return 1;
-    }
-
-    std::cout << "File size: " << fileStat.st_size << " bytes" << std::endl;
-    std::cout << "Number of links: " << fileStat.st_nlink << std::endl;
-    std::cout << "File inode: " << fileStat.st_ino << std::endl;
-
-    if (S_ISLNK(fileStat.st_mode)) {
-        std::cout << "This is a symbolic link." << std::endl;
-    } else if (S_ISDIR(fileStat.st_mode)) {
-        std::cout << "This is a directory." << std::endl;
-    } else {
-        std::cout << "This is a regular file." << std::endl;
-    }
-
-    return 0;
-}
-
-Them the output is:
-
-g++ -o lstat_cpp lstat_cpp.cpp
-./lstat_cpp <file_or_symlink>
-
-
-
-Example Usage of lstat()
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/stat.h>
-#include <unistd.h>
-
-int main(int argc, char *argv[]) {
-    struct stat fileStat;
-
-    // Check if the user provided a filename as an argument
-    if (argc != 2) {
-        fprintf(stderr, "Usage: %s <filename>\n", argv[0]);
-        return EXIT_FAILURE;
-    }
-
-    // Call lstat() on the provided filename
-    if (lstat(argv[1], &fileStat) < 0) {
-        perror("lstat");
-        return EXIT_FAILURE;
-    }
-
-    // Print file information
-    printf("Information for %s:\n", argv[1]);
-    printf("File Size: %lld bytes\n", (long long)fileStat.st_size);
-    printf("Number of Links: %ld\n", (long)fileStat.st_nlink);
-    printf("File inode: %lu\n", (unsigned long)fileStat.st_ino);
-    printf("File type: ");
-
-    // Determine file type
-    if (S_ISREG(fileStat.st_mode)) {
-        printf("regular file\n");
-    } else if (S_ISDIR(fileStat.st_mode)) {
-        printf("directory\n");
-    } else if (S_ISLNK(fileStat.st_mode)) {
-        printf("symbolic link\n");
-    } else if (S_ISCHR(fileStat.st_mode)) {
-        printf("character device\n");
-    } else if (S_ISBLK(fileStat.st_mode)) {
-        printf("block device\n");
-    } else if (S_ISFIFO(fileStat.st_mode)) {
-        printf("FIFO/pipe\n");
-    } else if (S_ISSOCK(fileStat.st_mode)) {
-        printf("socket\n");
-    } else {
-        printf("unknown type\n");
-    }
-
-    return EXIT_SUCCESS;
-}
-
-Output : data/user/0/ru.iiec.cxxdroid/files/iiec_tmp_binary <filenname>
-
-1. Include Headers: We include <stdio.h> for input/output functions, <stdlib.h> for general utilities, <sys/stat.h> for the stat structure and lstat() function, and <unistd.h> for POSIX operating system API.
-
-2. Check Arguments: The program expects one argument (the filename). If not provided, it prints usage instructions and exits.
-
-3. Call lstat(): The lstat() function is called with the filename and a pointer to a struct stat. If it fails, it prints an error message using perror().
-
-4. Print Information: If successful, it prints various attributes of the file, including size, number of links, inode number, and file type.
-
-5. File Type Determination: The program uses macros like S_ISREG, S_ISDIR, etc., to determine the type of file.
-
-Compilation and Execution
-To compile and run this program, save it as lstat_example.c and use the following commands in your terminal:
-
-gcc -o lstat_example lstat_example.c
-./lstat_example <filename>
-
-Replace <filename> with the path to a file or symbolic link you want to examine.
-
-Make sure you have the appropriate permissions to access the file or symbolic link you're querying with lstat().
