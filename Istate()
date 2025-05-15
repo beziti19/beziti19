@@ -95,8 +95,3 @@ ENOTDIR: A component of the path is not a directory.
 ELOOP: Too many symbolic links encountered while resolving pathname.
 
 
-
----
-
-Let me know if you’d like a real-world example or code demo using lstat() in a program.
-
