@@ -14,13 +14,13 @@
 
   <section id="installation">
     <h2> Installation</h2>
-    <p><details><pre><h2>installation </h2>
-The installation process for Tizen OS primarily involves installing Tizen Studio, the dedicated development environment, and then installing the necessary tools and SDKs within it. You can also install Tizen SDK through Visual Studio. For Samsung TVs, you may need to install third-party apps using USB or by enabling developer mode and allowing installation from unknown sources. 
-The installer has been renewed to provide a better user experience and show the unique Tizen philosophy. Using the new installer, you can now install the basic platform and the useful tools with a few clicks.
+    <details><p><h2>installation </h2>
+The installation process for Tizen OS primarily involves installing Tizen Studio, the dedicated development environment, and then installing the necessary tools and SDKs within it. You can also install Tizen SDK through Visual Studio. For Samsung TVs, you may need to install third-party apps using USB or by enabling developer mode and allowing installation from unknown sources. </p>
+<p>The installer has been renewed to provide a better user experience and show the unique Tizen philosophy. Using the new installer, you can now install the basic platform and the useful tools with a few clicks.</p>
 
-You can use either the GUI or the CLI version of the installer.
+     <p>  You can use either the GUI or the CLI version of the installer.</p>
 
-Using the GUI Installer
+ <p>Using the GUI Installer</p>
 
 To install Tizen Studio:
 <li> Search Tizen Studio installer </li>
@@ -36,150 +36,153 @@ To install Tizen Studio:
       <li>Click  Install on latest version (9.0) and accept  the Package Manager license agreement </li>
       <li>Wait for your installation is finished :
       </li>
-    </pre> </details></p>
+     </details></p>
    
   </section>
 
   <section id="tizen">
     <h2>2. Tizen OS</h2>
-    <p><details><pre>
+    <p><details>
      <h2> Introduction </h2>
-Tizen is an open source Linux based operating system.It is primarily developed by Samsung electronics and supported by Linux Foundation.tizen is device powered by tizen can provide seamless connectivity to tizen developers and device users among various device type.
-• Tizen designed for diverse device are getting smarter and more connected  
-• It supports both headed and headless product 
-• It improves security measures that protect users information and risks like loading un trusted software 
-• It allows developers creat customised apps that use wide range of device feature 
-• It is based on the Linux kernel  and designed to provide smooth and efficient user experiences 
-•  is designed to power a wide variety of devices, from smartphones and tablets to smart TVs and wearables, as well as Internet of Things (IoT). 
-• It’s developed by the Tizen Association, which includes major players like Samsung and Intel.
-•  The goal of Tizen is to create a versatile and adaptable platform that caters to the needs of both manufacturers and developers.
-• At its core, Tizen aims to unify the experience across different types of devices, making it easier for users to navigate and enjoy their technology. 
-• It  focuses on simplicity and user-friendliness.
-•  Tizen strives to provide a seamless experience, no matter what device you’re using.
+Tizen is an open source Linux based operating system.It is primarily developed by Samsung electronics and supported by Linux Foundation.</p>
+ <p>tizen is device powered by tizen can provide seamless connectivity to tizen developers and device users among various device type.</p>
+<li> Tizen designed for diverse device are getting smarter and more connected  </li>
+<li> It supports both headed and headless product </li>
+<li> It improves security measures that protect users information and risks like loading un trusted software </li>
+<li> It allows developers creat customised apps that use wide range of device feature </li>
+<li> It is based on the Linux kernel  and designed to provide smooth and efficient user experiences </li>
+<li>  is designed to power a wide variety of devices, from smartphones and tablets to smart TVs and wearables, as well as Internet of Things (IoT). </li>
+<li> It’s developed by the Tizen Association, which includes major players like Samsung and Intel.</li>
+<li>  The goal of Tizen is to create a versatile and adaptable platform that caters to the needs of both manufacturers and developers.</li>
+<li> At its core, Tizen aims to unify the experience across different types of devices, making it easier for users to navigate and enjoy their technology. </li>
+<li> It  focuses on simplicity and user-friendliness.</li>
+<li>  Tizen strives to provide a seamless experience, no matter what device you’re using.</li>
 
 <h2>History of tizen</h2>
 
-The journey of Tizen OS began in 2005 when Nokia developed a platform based on Debian GNU/Linux, which included the Maemo operating system and its accompanying Software Development Kit (SDK). In February 2010, Nokia and Intel Corporation announced a significant collaboration, merging the Maemo platform with Intel's Moblin, a "mobile Linux" initiative. This partnership resulted in the creation of MeeGo.
+ <p>The journey of Tizen OS began in 2005 when Nokia developed a platform based on Debian GNU/Linux, which included the Maemo operating system and its accompanying Software Development Kit (SDK). </p>
+ <p>In February 2010, Nokia and Intel Corporation announced a significant collaboration, merging the Maemo platform with Intel's Moblin, a "mobile Linux" initiative. This partnership resulted in the creation of MeeGo.</p>
 
-However, in February 2011, Nokia shifted its focus by partnering with Microsoft to establish a global mobile ecosystem, opting to use the Windows Operating System for its devices. This decision left Intel without a major mobile hardware partner, ultimately leading to the abandonment of MeeGo in favor of a new project: Tizen.
+ <p>However, in February 2011, Nokia shifted its focus by partnering with Microsoft to establish a global mobile ecosystem, opting to use the Windows Operating System for its devices. This decision left Intel without a major mobile hardware partner, ultimately leading to the abandonment of MeeGo in favor of a new project: Tizen.</p>
 
-On February 25, 2013, Samsung made a pivotal announcement regarding its mobile strategy. The company decided to retire its Bada operating system (with "bada" meaning "ocean" in Korean) and merge its features and functionalities into Tizen. 
+ <p>On February 25, 2013, Samsung made a pivotal announcement regarding its mobile strategy. The company decided to retire its Bada operating system (with "bada" meaning "ocean" in Korean) and merge its features and functionalities into Tizen. </p>
 
-Today, Tizen is hosted by the Linux Foundation, with its development being fully open and guided by a technical team comprised of experts from both Intel and Samsung. This collaborative effort aims to create a versatile and adaptable platform that serves a wide range of devices, from smartphones to IoT 
+ <p>Today, Tizen is hosted by the Linux Foundation, with its development being fully open and guided by a technical team comprised of experts from both Intel and Samsung. This collaborative effort aims to create a versatile and adaptable platform that serves a wide range of devices, from smartphones to IoT </p>
 
 <h2>Objective of Tizen OS </h2>
 
-Tizen  provides an application framework based on JavaScript. JavaScript is strong especially in IoT devices, since it has enormous developer community support and a fast development cycle.
+ <p>Tizen  provides an application framework based on JavaScript. JavaScript is strong especially in IoT devices, since it has enormous developer community support and a fast development cycle.</p>
 
-1. Cross-Device Compatibility: To enable a seamless user experience across various device categories by providing a unified platform that allows applications to run on multiple devices without extensive modification.
+ <p>1. Cross-Device Compatibility: To enable a seamless user experience across various device categories by providing a unified platform that allows applications to run on multiple devices without extensive modification.</p>
 
-2. Developer Empowerment: To facilitate application development through support for multiple programming languages and frameworks, particularly emphasizing web technologies like HTML5, thereby encouraging innovation and creativity in app design.
+ <p>2. Developer Empowerment: To facilitate application development through support for multiple programming languages and frameworks, particularly emphasizing web technologies like HTML5, thereby encouraging innovation and creativity in app design.</p>
 
-3. Modularity and Flexibility: To offer a modular architecture that allows manufacturers to customize the operating system according to their specific requirements and use cases, enhancing adaptability in different markets.
+ <p>3. Modularity and Flexibility: To offer a modular architecture that allows manufacturers to customize the operating system according to their specific requirements and use cases, enhancing adaptability in different markets.</p>
 
-4. Enhanced User Experience: To deliver an intuitive and responsive user interface that meets the needs of diverse users while ensuring accessibility and ease of use.
+ <p>4. Enhanced User Experience: To deliver an intuitive and responsive user interface that meets the needs of diverse users while ensuring accessibility and ease of use.</p>
 
-5. Robust Security: To prioritize security through features such as sandboxing, secure boot, and regular updates, ensuring the protection of user data and maintaining trust in the platform.
+ <p>5. Robust Security: To prioritize security through features such as sandboxing, secure boot, and regular updates, ensuring the protection of user data and maintaining trust in the platform.</p>
 
-6. Ecosystem Growth: To foster a vibrant ecosystem of applications and services that enrich the user experience, encouraging developers to create and distribute innovative solutions through the Tizen Store.
+ <p>6. Ecosystem Growth: To foster a vibrant ecosystem of applications and services that enrich the user experience, encouraging developers to create and distribute innovative solutions through the Tizen Store.</p>
 
-7. Support for Emerging Technologies: To adapt to the evolving landscape of technology by integrating support for new standards and innovations in areas such as IoT, artificial intelligence, and connectivity.
+ <p>7. Support for Emerging Technologies: To adapt to the evolving landscape of technology by integrating support for new standards and innovations in areas such as IoT, artificial intelligence, and connectivity.</p>
 
-8. Software Updates
+ <p>8. Software Updates
 
-For home appliance products, Tizen RT supports the proprietary software update mechanism developed by Samsung. As Tizen RT becomes an open source project, non-Samsung devices running Tizen RT require the software update service as well. To support non-Samsung devices, Tizen RT plans to support OMA lightweight M2M (LWM2M)-based FOTA in 2017. ARTIK Cloud already supports LWM2M.
+For home appliance products, Tizen RT supports the proprietary software update mechanism developed by Samsung. As Tizen RT becomes an open source project, non-Samsung devices running Tizen RT require the software update service as well. To support non-Samsung devices, Tizen RT plans to support OMA lightweight M2M (LWM2M)-based FOTA in 2017. ARTIK Cloud already supports LWM2M.</p>
 
-9. Fault Tolerance
+ <p>9. Fault Tolerance
 
 IoT platforms face a challenge in the large-scale device management of deployed IoT devices. System reliability has become a key success factor for IoT platforms. If a critical bug in device drivers or other system components occurs, the whole system inevitably crashes in the case of a traditional monolithic kernel. A clear solution is needed to overcome this challenge; however, typical Tizen RT target devices have only an MPU (memory protection unit). Without an MMU (memory management unit), protecting the system from faults is much more difficult. To provide MPU-based fault isolation, Tizen RT pursues 4 approaches:
 
-• Per-thread memory protection
+<li> Per-thread memory protection</li>
 
-• Microkernel architecture
+<li> Microkernel architecture</li>
 
-• Self-healing
+<li> Self-healing</li>
 
-• Live update
+<li> Live update</li></p>
 
-Assuming the completion of all these features, Tizen RT can be safely protected from any kind of faults. For example, even though a network component encounters a critical error, this fault can be identified by memory protection and isolated by the microkernel architecture. The network component can be restarted by self-healing without any effect on the entire system. If that component is not self-healed eventually, it can be updated by live update through software updating.
+ <p>Assuming the completion of all these features, Tizen RT can be safely protected from any kind of faults.</p> 
+ For example, even though a network component encounters a critical error, this fault can be identified by memory protection and isolated by the microkernel architecture. The network component can be restarted by self-healing without any effect on the entire system. If that component is not self-healed eventually, it can be updated by live update through software updating.
 
-10. Memory Protection
+ <p>10. Memory Protection
 
-Tizen RT supports not only flat build, but also memory-protected build. The former can help to reduce the memory usage at the expense of memory vulnerability. The latter can be achieved at the cost of about 20~30% increase of memory usage. Which mode is more suitable for low-end IoT devices depends on the trade-off analysis, considering software requirements and hardware limitations.
+Tizen RT supports not only flat build, but also memory-protected build. The former can help to reduce the memory usage at the expense of memory vulnerability. The latter can be achieved at the cost of about 20~30% increase of memory usage. Which mode is more suitable for low-end IoT devices depends on the trade-off analysis, considering software requirements and hardware limitations.</p>
 
-User/kernel space separation has already been achieved. The entire memory map is divided into user and kernel spaces. The kernel space is exclusively accessed by the kernel only. Any user tasks which illegally attempt to access this memory region raise an exception. In this mode, the kernel executes with privileged permissions while user threads execute with unprivileged, restricted permissions, as shown in the following figure. Per-thread memory protection is expected to be implemented in the first half of 2017.
+ <p>User/kernel space separation has already been achieved. The entire memory map is divided into user and kernel spaces. The kernel space is exclusively accessed by the kernel only. Any user tasks which illegally attempt to access this memory region raise an exception. In this mode, the kernel executes with privileged permissions while user threads execute with unprivileged, restricted permissions, as shown in the following figure. Per-thread memory protection is expected to be implemented in the first half of 2017.</p>
 
-The user thread is executed in the unprivileged mode with restricted permissions. When multiple threads are running, the scheduler preempts the currently-running task and brings the new ready-to-run thread for execution. The stack/data region of thread A is protected from being written by thread B even after thread A is preempted by thread B. This per-thread protection can be realized by the MPU which stores and restores the MPU context of every thread at every context switch.
+ <p>The user thread is executed in the unprivileged mode with restricted permissions. When multiple threads are running, the scheduler preempts the currently-running task and brings the new ready-to-run thread for execution. The stack/data region of thread A is protected from being written by thread B even after thread A is preempted by thread B. This per-thread protection can be realized by the MPU which stores and restores the MPU context of every thread at every context switch.</p>
 
  <h2> Software and hardware requirements of Tizen OS </h2>
 
-The software and hardware requirements for Tizen OS can vary based on the specific version of Tizen and the type of device it is intended for (e.g., smartphones, smart TVs, wearables, IoT devices). Below are general guidelines for both software and hardware requirements:
+ <p>The software and hardware requirements for Tizen OS can vary based on the specific version of Tizen and the type of device it is intended for (e.g., smartphones, smart TVs, wearables, IoT devices). Below are general guidelines for both software and hardware requirements:</p>
 
-Software Requirements
+<h4>Software Requirements</h4>
 
-1. Development Environment:
+ <p>1. Development Environment:
 
-   • Tizen Studio: The official IDE for Tizen application development, which includes tools for building, debugging, and testing applications.
+   <li> Tizen Studio: The official IDE for Tizen application development, which includes tools for building, debugging, and testing applications.</li>
 
-   • Web Development Tools: Support for web technologies like HTML5, CSS, and JavaScript.
+   <li> Web Development Tools: Support for web technologies like HTML5, CSS, and JavaScript.</li>
 
-   • Native Development Tools: C/C++ development tools for native applications.
+   <li> Native Development Tools: C/C++ development tools for native applications.</li></p>
 
-2. Supported APIs:
+ <p>2. Supported APIs:
 
-   • Tizen provides various APIs for accessing device features, including multimedia, sensors, networking, and more. Developers need to be familiar with these APIs based on the type of application they are building.
+   • Tizen provides various APIs for accessing device features, including multimedia, sensors, networking, and more. Developers need to be familiar with these APIs based on the type of application they are building.</p>
 
-3. Frameworks:
+ <p>3. Frameworks:
 
    • Support for various frameworks such as .NET, W3C APIs, and others depending on the target application type.
+</p>
+<h4>Hardware Requirements</h4>
 
-Hardware Requirements
+ <p>1. Processor:
 
-1. Processor:
+   <li> ARM-based processors (e.g., Cortex-A series) are commonly used in Tizen devices.</li>
 
-   • ARM-based processors (e.g., Cortex-A series) are commonly used in Tizen devices.
+   <li> x86 architecture is also supported in some cases, particularly for smart TVs and other devices.</li></p>
 
-   • x86 architecture is also supported in some cases, particularly for smart TVs and other devices.
+ <p>2. Memory:
 
-2. Memory:
+   <li> Minimum RAM: Typically 512 MB or higher, depending on the device type.</li>
 
-   • Minimum RAM: Typically 512 MB or higher, depending on the device type.
+   <li> Recommended RAM: 1 GB or more for better performance, especially for smartphones and complex applications.</li></p>
 
-   • Recommended RAM: 1 GB or more for better performance, especially for smartphones and complex applications.
+ <p>3. Storage:
 
-3. Storage:
+   <li> Minimum storage: At least 1 GB of internal storage is recommended for basic functionality.</li>
 
-   • Minimum storage: At least 1 GB of internal storage is recommended for basic functionality.
+   <li> Additional storage may be required for applications, media files, and system updates.</li></p>
 
-   • Additional storage may be required for applications, media files, and system updates.
+</p>4. Display:
 
-4. Display:
+   <li> Support for various display resolutions depending on the device category (e.g., HD for TVs, standard resolutions for wearables).</li></p>
 
-   • Support for various display resolutions depending on the device category (e.g., HD for TVs, standard resolutions for wearables).
+</p>5. Connectivity:
 
-5. Connectivity:
+   <li> Support for Wi-Fi, Bluetooth, and possibly cellular connectivity (for smartphones).
+</li>
+   <li> Ethernet support may be required for certain devices.</li></p>
 
-   • Support for Wi-Fi, Bluetooth, and possibly cellular connectivity (for smartphones).
+ <p>6. Sensors and Interfaces (depending on the device):
 
-   • Ethernet support may be required for certain devices.
+   <li> Touchscreen capabilities for smartphones and wearables.</li>
 
-6. Sensors and Interfaces (depending on the device):
+   <li> Various sensors such as accelerometers, gyroscopes, heart rate monitors (for wearables), etc.</li></p>
 
-   • Touchscreen capabilities for smartphones and wearables.
+ <p>7. Graphics:
 
-   • Various sensors such as accelerometers, gyroscopes, heart rate monitors (for wearables), etc.
-
-7. Graphics:
-
-   • GPU support may be required for rendering graphics-intensive applications, especially in smart TVs and gaming devices.
-
+   <li> GPU support may be required for rendering graphics-intensive applications, especially in smart TVs and gaming devices.</li>
+</p>
 Note
 
 The specific requirements can vary significantly based on the intended use case of the Tizen OS device. Therefore, it's essential to refer to the official Tizen documentation for the particular version and device category you are interested in to obtain precise specifications.
 
 
 
-Supported file system 
+<h4>Supported file system </h4>
 
 1. ext4 (Fourth Extended File System)
 
