@@ -438,7 +438,7 @@ Recommendations for Using Tizen OS:
 
 <li>Tizen OS is a robust platform suitable for various applications, especially in the smart device ecosystem. Whether you are a developer looking to create new applications or a consumer interested in smart technology, Tizen offers numerous advantages worth exploring.</li>
 
- Vertualizatin in modern OS 
+ <h3>Vertualizatin in modern OS </h3>
 
 What is Virtualization?
 
