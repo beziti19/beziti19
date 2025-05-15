@@ -1,0 +1,102 @@
+The lstat() system call in Unix-like operating systems is used to retrieve
+information about a file, similar to the stat() system call. However, it 
+differs in its treatment of symbolic links.
+
+---
+
+Function Prototype (in C):
+
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
+int lstat(const char *pathname, struct stat *statbuf);
+
+---
+
+Parameters:
+
+pathname: A pointer to a null-terminated string that specifies the path 
+to the file.
+
+statbuf: A pointer to a struct stat where the file information will be 
+stored.
+
+---
+
+Return Value:
+
+Returns 0 on success.
+
+Returns -1 on failure and sets errno to indicate the error.
+
+---
+
+Behavior and Key Difference with stat():
+
+lstat() does not follow symbolic links.
+
+If the file specified by pathname is a symbolic link, lstat() returns 
+information about the link itself.
+
+In contrast, stat() follows the link and returns information about 
+the file the link points to.
+
+---
+
+Structure: struct stat
+
+This structure holds various metadata about the file:
+
+struct stat {
+    dev_t     st_dev;     // ID of device containing file
+    ino_t     st_ino;     // inode number
+    mode_t    st_mode;    // file type and mode (permissions)
+    nlink_t   st_nlink;   // number of hard links
+    uid_t     st_uid;     // user ID of owner
+    gid_t     st_gid;     // group ID of owner
+    dev_t     st_rdev;    // device ID (if special file)
+    off_t     st_size;    // total size, in bytes
+    blksize_t st_blksize; // block size for filesystem I/O
+    blkcnt_t  st_blocks;  // number of 512B blocks allocated
+
+    time_t    st_atime;   // time of last access
+    time_t    st_mtime;   // time of last modification
+    time_t    st_ctime;   // time of last status change
+};
+
+---
+
+Common Use Case:
+
+To determine whether a file is a symbolic link:
+
+struct stat sb;
+
+if (lstat("myfile", &sb) == 0) {
+    if (S_ISLNK(sb.st_mode)) {
+        printf("It's a symbolic link.\n");
+    }
+}
+
+
+---
+
+Error Conditions:
+
+lstat() can fail for several reasons:
+
+ENOENT: The file does not exist.
+
+EACCES: Permission denied.
+
+ENOTDIR: A component of the path is not a directory.
+
+ELOOP: Too many symbolic links encountered while resolving pathname.
+
+
+
+---
+
+Let me know if you’d like a real-world example or code demo using lstat() in a program.
+
