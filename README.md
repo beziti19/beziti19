@@ -558,10 +558,9 @@ gcc -o lstat_example lstat_example.c
 Replace <filename> with the path to a file or symbolic link you want to examine.
 
 Make sure you have the appropriate permissions to access the file or symbolic link you're querying with lstat().
-lstat() system call
+lstat() system call</p>
 
-    </p>
-    </ul>
+   
   </section>
 
 </body>
