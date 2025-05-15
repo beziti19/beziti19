@@ -17,8 +17,7 @@
     <details><p><h2>installation </h2>
 The installation process for Tizen OS primarily involves installing Tizen Studio, the dedicated development environment, and then installing the necessary tools and SDKs within it. You can also install Tizen SDK through Visual Studio. For Samsung TVs, you may need to install third-party apps using USB or by enabling developer mode and allowing installation from unknown sources. </p>
 <p>The installer has been renewed to provide a better user experience and show the unique Tizen philosophy. Using the new installer, you can now install the basic platform and the useful tools with a few clicks.</p>
-
-     <p>  You can use either the GUI or the CLI version of the installer.</p>
+ You can use either the GUI or the CLI version of the installer.
 
  <p>Using the GUI Installer</p>
 
