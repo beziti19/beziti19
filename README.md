@@ -43,8 +43,7 @@ To install Tizen Studio:
   <section id="tizen">
     <h2>2. Tizen OS</h2>
     <p><details><pre>
-      Introduction 
-
+     <h2> Introduction </h2>
 Tizen is an open source Linux based operating system.It is primarily developed by Samsung electronics and supported by Linux Foundation.tizen is device powered by tizen can provide seamless connectivity to tizen developers and device users among various device type.
 • Tizen designed for diverse device are getting smarter and more connected  
 • It supports both headed and headless product 
@@ -58,7 +57,7 @@ Tizen is an open source Linux based operating system.It is primarily developed b
 • It  focuses on simplicity and user-friendliness.
 •  Tizen strives to provide a seamless experience, no matter what device you’re using.
 
-History of tizen
+<h2>History of tizen</h2>
 
 The journey of Tizen OS began in 2005 when Nokia developed a platform based on Debian GNU/Linux, which included the Maemo operating system and its accompanying Software Development Kit (SDK). In February 2010, Nokia and Intel Corporation announced a significant collaboration, merging the Maemo platform with Intel's Moblin, a "mobile Linux" initiative. This partnership resulted in the creation of MeeGo.
 
@@ -68,7 +67,7 @@ On February 25, 2013, Samsung made a pivotal announcement regarding its mobile s
 
 Today, Tizen is hosted by the Linux Foundation, with its development being fully open and guided by a technical team comprised of experts from both Intel and Samsung. This collaborative effort aims to create a versatile and adaptable platform that serves a wide range of devices, from smartphones to IoT 
 
-Objective of Tizen OS 
+<h2>Objective of Tizen OS </h2>
 
 Tizen  provides an application framework based on JavaScript. JavaScript is strong especially in IoT devices, since it has enormous developer community support and a fast development cycle.
 
@@ -112,7 +111,7 @@ User/kernel space separation has already been achieved. The entire memory map is
 
 The user thread is executed in the unprivileged mode with restricted permissions. When multiple threads are running, the scheduler preempts the currently-running task and brings the new ready-to-run thread for execution. The stack/data region of thread A is protected from being written by thread B even after thread A is preempted by thread B. This per-thread protection can be realized by the MPU which stores and restores the MPU context of every thread at every context switch.
 
-  Software and hardware requirements of Tizen OS 
+ <h2> Software and hardware requirements of Tizen OS </h2>
 
 The software and hardware requirements for Tizen OS can vary based on the specific version of Tizen and the type of device it is intended for (e.g., smartphones, smart TVs, wearables, IoT devices). Below are general guidelines for both software and hardware requirements:
 
@@ -255,7 +254,7 @@ The combination of these file systems in Tizen OS allows it to cater to a wide r
 
 The selection of these file systems reflects Tizen OS's focus on flexibility, performance, reliability, and compatibility across various device types. By incorporating ext4 for internal storage needs and FAT/exFAT for external storage solutions, Tizen can effectively meet the demands of modern applications while ensuring ease of use for consumers. This multi-faceted approach allows Tizen to serve a diverse ecosystem of devices—from smart TVs to wearables—while maintaining robust performance and user-friendly features.
 
-   advantage and disadvantage of Tizen OS 
+   <h2>advantage and disadvantage of Tizen OS </h2>
 
 Advantages
 Tizen OS offers several advantages that make it a compelling choice for various devices, including smart TVs, wearables, smartphones, and IoT devices. Here are some of the key advantages of Tizen OS:
