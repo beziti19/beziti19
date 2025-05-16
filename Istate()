@@ -93,5 +93,46 @@ EACCES: Permission denied.
 ENOTDIR: A component of the path is not a directory.
 
 ELOOP: Too many symbolic links encountered while resolving pathname.
+<!DOCTYPE html>
+<html> 
+<head>
+<title> lstat() in c++ </title>
+</head>
+<body>
+<h3> lstat() in c++</h3>
+<pre><code>
+#include <iostream>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
 
+int main() {
+    const char* path = "test.txt";  // Change this to your file or symlink
+
+    struct stat fileInfo;
+
+    if (lstat(path, &fileInfo) == -1) {
+        perror("lstat");
+        return 1;
+    }
+
+    std::cout << "File: " << path << std::endl;
+    std::cout << "Size: " << fileInfo.st_size << " bytes" << std::endl;
+    std::cout << "Inode: " << fileInfo.st_ino << std::endl;
+
+    if (S_ISLNK(fileInfo.st_mode)) {
+        std::cout << "This is a symbolic link." << std::endl;
+    } else if (S_ISREG(fileInfo.st_mode)) {
+        std::cout << "This is a regular file." << std::endl;
+    } else if (S_ISDIR(fileInfo.st_mode)) {
+        std::cout << "This is a directory." << std::endl;
+    } else {
+        std::cout << "Other file type." << std::endl;
+    }
+
+    return 0;
+}
+</code></pre>
+</body>
+</html>
 
