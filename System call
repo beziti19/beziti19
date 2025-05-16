@@ -1,4 +1,11 @@
-
+<!DOCTYPE html>
+<html> 
+<head>
+<title> lstat() in c++ </title>
+</head>
+<body>
+<h3> lstat() in c++</h3>
+<pre><code>
 #include <iostream>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -30,7 +37,9 @@ int main() {
 
     return 0;
 }
-
+</code></pre>
+</body>
+</html>
 
 
 
