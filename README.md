@@ -91,7 +91,7 @@ installation process for Tizen OS primarily involves installing Tizen Studio, th
 To install Tizen Studio:
 <li> Search Tizen Studio installer </li>
 <image src="https://github.com/user-attachement/assets/b3cbeff5-db8e-49c6-aee
- c-32bed336ac5b.jpg" width="150">
+ c-32bed336ac5b" width="150">
 <li>Down load 64 bit</li>
 <li> Wait for fiile downloading  ends </li>
 <li> Open the file </li>
