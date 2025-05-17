@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html> 
 <head>
-<title> lstat() in c++ </title>
+<title> lstat </title>
 </head>
 <body>
-<h3> lstat() in c++</h3>
+<h3> lstat </h3>
 <pre><code>
 #include <iostream>
 #include <sys/types.h>
