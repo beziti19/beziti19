@@ -551,20 +551,21 @@ Make sure you have the appropriate permissions to access the file or symbolic li
 lstat() system call</p>
 
 <code>
-#include <iostream>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
+       
+     #include <iostream>
+     #include <sys/types.h>
+     #include <sys/stat.h>
+     #include <unistd.h>
 
-int main() {
-    const char* path = "test.txt";  // Change this to your file or symlink
+     int main() {
+     const char* path = "test.txt";  // Change this to your file or symlink
 
-    struct stat fileInfo;
+     struct stat fileInfo;
 
-    if (lstat(path, &fileInfo) == -1) {
+     if (lstat(path, &fileInfo) == -1) {
         perror("lstat");
         return 1;
-    }
+     }
 
     std::cout << "File: " << path << std::endl;
     std::cout << "Size: " << fileInfo.st_size << " bytes" << std::endl;
@@ -581,8 +582,8 @@ int main() {
     }
 
     return 0;
-}
-</pre>
+    }
+</code>
   </section>
 
 </body>
