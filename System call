@@ -7,22 +7,22 @@
 int main() {
     const char* path = "test.txt";  // Change this to your file or symlink
 
-    struct stat fileInfo;
+    struct stat file;
 
-    if (lstat(path, &fileInfo) == -1) {
+    if (lstat(path, &file) == -1) {
         perror("lstat");
         return 1;
     }
 
     std::cout << "File: " << path << std::endl;
-    std::cout << "Size: " << fileInfo.st_size << " bytes" << std::endl;
-    std::cout << "Inode: " << fileInfo.st_ino << std::endl;
+    std::cout << "Size: " << file.st_size <<"                         bytes" << std::endl;
+     std::cout << "Inode: " << file.st_ino << std::endl;
 
-    if (S_ISLNK(fileInfo.st_mode)) {
+    if (S_ISLNK(file.st_mode)) {
         std::cout << "This is a symbolic link." << std::endl;
-    } else if (S_ISREG(fileInfo.st_mode)) {
+    } else if (S_ISREG(file.st_mode)) {
         std::cout << "This is a regular file." << std::endl;
-    } else if (S_ISDIR(fileInfo.st_mode)) {
+    } else if (S_ISDIR(file.st_mode)) {
         std::cout << "This is a directory." << std::endl;
     } else {
         std::cout << "Other file type." << std::endl;
